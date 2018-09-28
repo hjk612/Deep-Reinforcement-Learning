@@ -51,6 +51,8 @@ class Agent:
         self.reward = 0.0
     
     def step(self, env):
+        #getting the observation is of no use here
+        #our agent is dumb and doesn't observe the environment.
         obs = env.get_observation()
         actions = env.get_action() 
         reward = env.action(random.choice(actions))
